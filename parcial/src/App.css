@@ -52,12 +52,18 @@
 .gridspace {
   display: grid;
   grid-template-columns: 60% 40%;
+  align-content: center;
+  justify-content: center;
 }
 
 .whiteSpace{
   grid-column: 1 2;
+  align-content: center;
+  justify-content: center;
 }
 
 .formulario{
   grid-column: 2 3;
+  align-content: center;
+  justify-content: center;
 }

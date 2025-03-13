@@ -66,7 +66,7 @@ function LoginForm() {
                         </div>
                         {errors.password && <p className="alerta">{errors.password}</p>}
                     </div>
-                    <Button variant="primary" type="submit">Log In</Button>
+                    <Button variant="primary" type="submit">Login</Button>
                 </form>
             </div>
         </div>
