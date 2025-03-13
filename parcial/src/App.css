@@ -28,11 +28,36 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fondoHome {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  margin-top: 0px;
+  align-content: center;
+  justify-content: center;
+}
+
+#homeMenu {
+  height: 30%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  justify-content: center;
+  background-color: rgb(50,72,50,0.8);
+}
+
+.gridspace {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.whiteSpace{
+  grid-column: 1 2;
+}
+
+.formulario{
+  grid-column: 2 3;
 }
