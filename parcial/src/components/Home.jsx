@@ -4,6 +4,9 @@ import Button from "react-bootstrap/esm/Button";
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import MenuIcon from './menuIcon.png';
+import StoreIcon from './storeIcon.png';
+import CartIcon from './cartIcon.png';
 
 function Home() {
 
@@ -13,19 +16,19 @@ function Home() {
                 <Row>
                     <Col>
                         <div>
-                            <img src="" alt="logo-menu"/>
+                            <img className="logos-home" src={MenuIcon} alt="logo-menu"/>
                             <h1>MENU</h1>
                         </div>
                     </Col>
                     <Col>
                         <div>
-                            <img src="" alt="logo-stores"/>
+                            <img className="logos-home" src={StoreIcon} alt="logo-stores"/>
                             <h1>STORES</h1>
                         </div>
                     </Col>
                     <Col>
                         <div>
-                            <img src="" alt="logo-cart"/>
+                            <img className="logos-home" src={CartIcon} alt="logo-cart"/>
                             <h1>CART</h1>
                         </div>
                     </Col>

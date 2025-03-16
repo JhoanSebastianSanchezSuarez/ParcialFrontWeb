@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import Button from "react-bootstrap/esm/Button";
-import Card from 'react-bootstrap/Card';
+import logo1 from './logo1.png';
+
 
 function LoginForm() {
     const [formValues, setFormValues] = useState({ user: "", password: "" });
@@ -38,7 +38,10 @@ function LoginForm() {
     return (
         <div className="gridspace">
             <div className="whiteSpace">
+                <img id="logo1" src={logo1} alt="logo"/>
                 <h1>Too Good To Go</h1>
+                <h2 id="subtitulo">Food Wasting Solution</h2>
+                <img id="imagenEnsalada" src= "https://www.foodandwine.com/thmb/IuZPWAXBp4YaT9hn1YLHhuijT3k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-big-italian-salad-hero-83e6ea846722478f8feb1eea33158b00.jpg" alt="imagen-ensalada"/>
             </div>
             <div className="formulario">
             <form onSubmit={handleSubmit}>
@@ -48,6 +51,7 @@ function LoginForm() {
                             className="customInput"
                             id="user"
                             name="user"
+                            placeholder="Username"
                             value={formValues.user}
                             onChange={handleUserChange}
                         />
@@ -59,14 +63,14 @@ function LoginForm() {
                                 className="customInput"
                                 id="password"
                                 name="password"
+                                placeholder="Password"
                                 value={formValues.password}
                                 onChange={handlePasswordChange}
-
                             />
                         </div>
                         {errors.password && <p className="alerta">{errors.password}</p>}
                     </div>
-                    <Button variant="primary" type="submit">Login</Button>
+                    <button id="login-button" type="submit">Login</button>
                 </form>
             </div>
         </div>

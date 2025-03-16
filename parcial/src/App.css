@@ -2,34 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 .fondoHome {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg");
+  background-image: url("https://plus.unsplash.com/premium_photo-1661777692723-ba8dd05065d9?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZCUyMHRhYmxlfGVufDB8fDB8fHww");
   height: 100vh;
   width: 100vw;
   background-size: cover;
@@ -40,13 +14,18 @@
 }
 
 #homeMenu {
-  height: 30%;
+  height: 60%;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
   align-content: center;
   justify-content: center;
-  background-color: rgb(50,72,50,0.8);
+  background-color: rgb(35,62,62,0.9);
+  border-radius: 50px;
+}
+
+#homeMenu h1 {
+  color: white;
 }
 
 .gridspace {
@@ -54,16 +33,95 @@
   grid-template-columns: 60% 40%;
   align-content: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .whiteSpace{
   grid-column: 1 2;
-  align-content: center;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  align-content: space-around;
   justify-content: center;
+  height: 100vh;
+  background-color: rgb(248,242, 242);
 }
 
 .formulario{
   grid-column: 2 3;
   align-content: center;
   justify-content: center;
+  background-color: rgba(35, 61, 62);
+  height: 100vh;
+}
+
+input {
+  border-radius: 30px;
+  width:70%;
+  height: 50px;
+  padding: 20px;
+  font-size: 26px;
+  align-content: center;
+  border: solid rgb(248,242, 242) 2px;
+  background-color: rgba(35, 61, 62);
+  color: rgb(248,242, 242);
+  outline: none;
+}
+
+input::placeholder{
+  color: rgb(248,242,242);
+  font-size: 20px;
+}
+
+.FormGroup{
+  padding-bottom: 20px;
+}
+
+#login-button {
+  border-radius: 20px;
+  background-color: rgb(248,242, 242);
+  height: 50px;
+  width: 30%;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  border: none;
+}
+
+.alerta{
+  color: rgb(248,242, 242);
+  padding: 10px
+}
+
+#imagenEnsalada {
+  border-top-right-radius: 25%;
+  border-top-left-radius: 25%;
+  max-width: 100%;
+  max-height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo1 {
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: rgba(35, 61, 62);
+}
+
+#subtitulo {
+  text-transform: uppercase;
+  color: rgb(158,106,88);
+  font-size: 16px;
+  font-weight: bolder;
+  font-stretch: expanded;
+  letter-spacing: 3px;
+}
+
+.logos-home{
+  width: 70%;
 }

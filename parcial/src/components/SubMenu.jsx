@@ -5,13 +5,15 @@ import Col from 'react-bootstrap/Col';
 
 
 function SubMenu(props) {
-    const [datos, setDatos] = useState();
+    const [detail, setDetail] = useState({});
+
     useEffect(() => {
-        const URL = "https://api.mockaroo.com/api/8bbcceb0?count=1&key=62e19930";
+        const URL = "https://api.mockaroo.com/api/8bbcceb0?count=1&key=b704a880";
         fetch(URL)
-            .then(response => response.json()).then(data => setDatos(data))
+            .then(response => response.json())
+            .then(data => setDetail(data))
             .catch(error => console.error('Error fetching data:', error));
-    });
+    }, []);
 
     return (
         <div className="subMenu">
@@ -47,7 +49,7 @@ function SubMenu(props) {
                 <Col>
                     <Card>
                         <Card.Footer>
-                            <h2> {datos.title1} </h2>
+                            <p> {detail?.clase1} </p>
                         </Card.Footer>
                     </Card>
                 </Col>
