@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import logo1 from './logo1.png';
-
+import { useTranslation } from 'react-i18next';
+import i18n from '../internacionalization/i18n';
 
 function LoginForm() {
     const [formValues, setFormValues] = useState({ user: "", password: "" });
     const [errors, setErrors] = useState({ password: "" });
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
 
     const handleUserChange = (e) => {
@@ -22,7 +24,7 @@ function LoginForm() {
         let passwordError = "";
 
         if (formValues.password.length > 8 || formValues.password.length < 5) {
-            passwordError = "La contraseña debe tener entre 5 y 8 caracteres.";
+            passwordError = t("error");
         }
 
         if (passwordError) {
@@ -30,7 +32,7 @@ function LoginForm() {
         } else {
             console.log("Formulario enviado", formValues);
             setErrors({ email: "", password: "" });
-            navigate("/home");
+            navigate(`/${i18n.language}/home`);
 
         }
     };
@@ -51,7 +53,7 @@ function LoginForm() {
                             className="customInput"
                             id="user"
                             name="user"
-                            placeholder="Username"
+                            placeholder={t("username")}
                             value={formValues.user}
                             onChange={handleUserChange}
                         />
@@ -63,14 +65,14 @@ function LoginForm() {
                                 className="customInput"
                                 id="password"
                                 name="password"
-                                placeholder="Password"
+                                placeholder={t("password")}
                                 value={formValues.password}
                                 onChange={handlePasswordChange}
                             />
                         </div>
                         {errors.password && <p className="alerta">{errors.password}</p>}
                     </div>
-                    <button id="login-button" type="submit">Login</button>
+                    <button id="login-button" type="submit">{t("login")}</button>
                 </form>
             </div>
         </div>

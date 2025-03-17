@@ -125,3 +125,45 @@ h1 {
 .logos-home{
   width: 70%;
 }
+
+.card-footer p {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.iconos-top {
+  height: 40px;
+  width: 40px !important;
+}
+
+.header-menu {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: rgba(35, 61, 62);
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
+.header-menu h1 {
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 48px;
+}
+
+#header1 {
+  grid-column: 1 2;
+}
+
+#header2 {
+  grid-column: 2 3;
+  color: white !important;
+}
+
+#header3 {
+  grid-column: 3 4;
+}
+

@@ -1,24 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card } from 'react-bootstrap';
+import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import LoginForm from './components/LoginForm';
 import Home from './components/Home';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SubMenu from './components/SubMenu';
+import i18n from './internacionalization/i18n';
+import { useEffect } from 'react';
+
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LoginForm/>}/>
-        <Route path="/home" element={<Home/>}/>
-        <Route path="/menu" element={<SubMenu/>}/>
-      </Routes>
+        <Routes>
+          <Route path="/:lng" element={<LanguageWrapper><LoginForm /></LanguageWrapper>} />
+          <Route path="/:lng/home" element={<LanguageWrapper><Home /></LanguageWrapper>} />
+          <Route path="/:lng/submenu" element={<LanguageWrapper><SubMenu /></LanguageWrapper>} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
+}
+
+function LanguageWrapper({ children }) {
+  const { lng } = useParams();
+
+
+  useEffect(() => {
+    if (lng) {
+      i18n.changeLanguage(lng);
+    }
+  }, [lng]);
+
+  return children;
 }
 
 export default App;
